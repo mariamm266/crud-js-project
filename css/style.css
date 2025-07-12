@@ -1,0 +1,54 @@
+#cover{
+  background-image: url(../images/pexels-mlkbnl-9247610.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#cover #title{
+   font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 100px;
+}
+
+#title:hover{
+  color: darkblue;
+  
+}
+
+.webcontent{
+  background-color: #958365
+}
+
+.contentText{
+  font-family: "Twinkle Star", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+
+}
+
+.labels{
+   font-family: "Shadows Into Light", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+.tableFont{
+   font-family: "Edu VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.clrBtn{
+  width: 10%;
+}
+.subBtn{
+  width: 10%;
+}
+#editBtn{
+  width: 10%;
+}

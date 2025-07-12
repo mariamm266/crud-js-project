@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/bookmark-solid.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Pacifico&family=Shadows+Into+Light&family=Twinkle+Star&display=swap" rel="stylesheet">
+<body>
+    <div id="cover" class="vh-100 d-flex align-items-center justify-content-center m-0">
+        <h1 id="title">Bookmarker</h1>
+    </div>
+    <section class="webcontent">
+        <div id="content" class="container p-5">
+        <h2 class="text-center contentText p-4">Bookmark your favorite sites</h2>
+        <form action="">
+          <div>
+            <label for="siteName" class="labels"> <i class="fa-solid fa-book"></i> Site Name</label>
+            <input type="text" id="siteName" placeholder="Bookmark name" class="w-75 " value="">
+          </div>
+          <div class="mb-4">
+            <label for="siteUrl" class="labels "> <i class="fa-solid fa-link"></i> Site URL</label>
+            <input type="text" id="siteUrl" placeholder="Website URL" class="w-75 " value="" >
+          </div>
+          <button id="addBtn" type="button" class="btn btn-dark subBtn " onclick="addBook()">Add</button>
+          <button id="editBtn" type="button" class="btn btn-dark" style="display: none;" onclick="editData()">Edit</button>
+          <button type="button" class="btn btn-danger clrBtn " onclick="clearForm()">Clear</button>
+        </form>
+        <div class="crudContent text-center mt-5">
+            <input onkeyup="search()" type="text" id="searchInput" class="form-control text-center w-75 mx-auto mb-4" placeholder="Search...........">
+            <table class="table">
+                <thead>
+                    <tr class="tableFont">
+                        <th>INDEX</th>
+                        <th>WEBSITE NAME</th>
+                        <th>VISIT</th>
+                        <th>DELETE</th>
+                        <th>UPDATE</th>
+                    </tr>
+                </thead>  
+                <tbody id="tabeleContent">
+                </tbody>  
+            </table>
+        </div>
+        
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-circle-exclamation" style="color: #da1b1b;"></i> Error</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4>Please enter correct site name or URL</h4>
+        <p><i class="fa-solid fa-check" style="color: #63E6BE;"></i> Make sure the site name isn't less than 3 charachters</p>
+        <p><i class="fa-solid fa-check" style="color: #63E6BE;"></i> Also make sure that the URL is valid</p>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>
